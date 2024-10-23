@@ -1,0 +1,9 @@
+{
+    "Department": true,
+    "Room": true,
+    "Doctor": true,
+    "Patient": true,
+    "Service": true,
+    "Surgery": true,
+    "User": true
+}
