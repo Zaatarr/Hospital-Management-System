@@ -4,6 +4,10 @@
     "Doctor": true,
     "Patient": true,
     "Service": true,
+<<<<<<< HEAD
     "Surgery": true,
     "User": true
+=======
+    "Surgery": true
+>>>>>>> b8ebf0f080af1300cab51bf0d1153e88394af315
 }

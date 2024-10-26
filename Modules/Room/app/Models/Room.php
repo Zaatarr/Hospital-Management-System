@@ -3,6 +3,7 @@
 namespace Modules\Room\Models;
 
 use Illuminate\Database\Eloquent\Model;
+
 use Modules\Department\Entities\Room_Dep;
 use Modules\Department\Entities\Department;
 use Modules\Room\Entities\Reservation;

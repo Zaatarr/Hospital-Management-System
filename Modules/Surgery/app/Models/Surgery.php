@@ -3,15 +3,15 @@
 namespace Modules\Surgery\Entities;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Modules\Doctor\Entities\Doctor;
 use Modules\Patient\Entities\PatientFile;
 use Modules\Doctor\Entities\Shift;
 
-
-
-
 class Surgery extends Model
 {
+    use HasFactory;
+
     protected $fillable = ['doctor_id', 'patient_id', 'surgery_type', 'doctor_shift'];
 
     public function doctor()
@@ -28,4 +28,6 @@ class Surgery extends Model
     {
         return $this->belongsTo(Shift::class, 'doctor_shift');
     }
+
+
 }

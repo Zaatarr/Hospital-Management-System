@@ -3,11 +3,14 @@
 namespace Modules\Doctor\Entities;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Modules\Department\Entities\Room_Dep;
 use Modules\Surgery\Entities\Surgery;
 
 class Doctor extends Model
 {
+    use HasFactory;
+
     protected $fillable = ['doctor_name', 'speciality_name'];
 
     public function shifts()
@@ -25,4 +28,3 @@ class Doctor extends Model
         return $this->hasMany(Room_Dep::class, 'doctor_id');
     }
 }
-

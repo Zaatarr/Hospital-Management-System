@@ -1,16 +1,16 @@
 <?php
 
 namespace Modules\Department\Entities;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Modules\Room\Models\Room;
 use Modules\Department\Entities\Room_Dep;
 
-
-
-
-use Illuminate\Database\Eloquent\Model;
-
 class Department extends Model
 {
+    use HasFactory;
+
     protected $fillable = ['dep_name'];
 
     public function rooms()
