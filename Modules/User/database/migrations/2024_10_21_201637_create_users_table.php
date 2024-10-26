@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email')->unique(); // Add parentheses to 'unique'
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->enum('role', ['admin', 'receptionist']);
+            $table->enum('role', ['admin', 'receptionist', 'doctor']);
             $table->rememberToken();
             $table->timestamps();
         });

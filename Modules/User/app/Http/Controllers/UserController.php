@@ -35,7 +35,7 @@ class UserController extends Controller
             'name' => 'required | string | max:30',
             'email' => 'required | string | email | max:255 | unique:users',
             'password' => 'required | string | confirmed | min:8',
-            'role' => 'required | in:admin, receptionist',
+            'role' => 'required | in:admin, receptionist, doctor',
         ]);
         $user = new User();
         $user->name = $validated['name'];
@@ -74,7 +74,7 @@ class UserController extends Controller
             'name' => 'required|string|max:30',
             'email' => 'required|string|email|max:255|unique:users,email,' . $user->id,
             'password' => 'required|string|confirmed|min:8',
-            'role' => 'required|in:admin,receptionist',
+            'role' => 'required|in:admin,receptionist, doctor',
         ]);
 
         $user->name = $validated['name'];
